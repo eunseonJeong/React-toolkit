@@ -1,0 +1,13 @@
+// react-router-dom, styled-components, redux를 사용
+
+todolist 만들기
+1. reducer (state 수정)->switch 문으로 상태관리 해주기
+
+2. 파일 쪼개서 redux 만들어주기
+
+3. 상세페이지 구현 (리액트 라우터 돔)
+     useLocation(링크형태) 으로 해주기 / Router.js생성 ->App.js에 import하기
+
+1) Reducer 함수를 `export default` 한다.
+2) Action creator 함수들을 `export` 한다.
+3) type이랑 payload 
