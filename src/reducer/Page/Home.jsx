@@ -27,7 +27,6 @@ function Home() {
   const fixTextTodo = (e) => {
     setFixText(e.target.value);
   };
-  
 
   return (
     <>

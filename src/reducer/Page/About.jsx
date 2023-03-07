@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
 function About() {
-  
+
   const param = useParams();
   const todoList = useSelector((state) => state.todo);
 
@@ -15,25 +15,18 @@ function About() {
     <div>
       <nav>
         <ul>
-          <li>
+          <button>
             <Link to="/">
               Home
             </Link>
-          </li>
+          </button>
 
-          <li>
-            <Link
-              to="/About"
-            >
-              About
-            </Link>
-          </li>
         </ul>
       </nav>
       <div>
-        {findTodo.id}
-        {findTodo.title}
-        {findTodo.text}
+        {findTodo.id} <br />
+        {findTodo.title} <br />
+        {findTodo.text} <br />
         </div>
     </div>
   );
