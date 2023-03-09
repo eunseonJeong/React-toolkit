@@ -28,6 +28,9 @@ function Home() {
     setFixText(e.target.value);
   };
 
+//DOM사용 value건드리기
+//state로 변경해주기
+
   return (
     <>
       <header> TodoList </header>
@@ -39,7 +42,9 @@ function Home() {
         <button
           onClick={(e) => {
             e.preventDefault();
-            dispatch(newTodo({ title, text }));
+            dispatch(newTodo({ title, text }))
+            setTitle('');
+            setText('');
           }}
         >
           작성

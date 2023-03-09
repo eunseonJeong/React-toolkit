@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+//객체로 변경하는 
 const initialState = [];
 
 export const todoSlice = createSlice({
@@ -31,15 +31,8 @@ export const todoSlice = createSlice({
         fixTodo: (state, {payload}) => {
             return state.map((item) => item.id === payload[0] ? {...item, title: payload[1], text: payload[2], edit: !item.edit} : item);
         },
-        removeTodo: (state, {payload}) => {
-            state.push({
-                title:'',
-                text:'',
-                payload,
-            })
-        }
     }
 })
 
-export const { newTodo, doneState, deleteTodo, editState, fixTodo, removeTodo } = todoSlice.actions;
+export const { newTodo, doneState, deleteTodo, editState, fixTodo} = todoSlice.actions;
 export default todoSlice.reducer;
